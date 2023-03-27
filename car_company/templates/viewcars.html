@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet"  href="{% static 'table.css' %}">
+</head>
+<body>
+
+<table class="fl-table">
+	<thead>
+	<tr>
+	<th>Car_Id</th>
+	<th> Car_name</th>
+	<th>Car_type</th>
+	<th>Rate_perday</th>
+	<th>Photo</th>
+	
+	</tr>
+</thead>
+
+{% for post in allrecords %}
+<tbody>
+	<tr>
+		<td>
+			{{post.Car_Id}}
+		</td>
+		<td>
+			{{post.Car_name}}
+		</td>
+		<td>
+			{{post.Car_type}}
+		</td>
+		<td>
+			{{post.Rate_perday}}
+		</td>
+	                  <td>
+                                                      <img src="{{post.img_url}}" width=100 height=100>
+                                    </td>
+	</tr>
+{% endfor %}	
+		</tbody>
+	
+</table>	
+
+
+ 	
+
+
+</body>
+</html>

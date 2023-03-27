@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<table border="1" style="width:100%">
+	<caption>REGISTERED CUSTOMER DETAILS</caption>
+	<tr>
+	<th>Username</th>
+	<th>Password</th>
+	<th>Firstname</th>
+	<th>Lastname</th>
+	<th>Age</th>
+	<th>Gender</th>
+	</tr>
+{% for post in records %}	
+	<tr>
+		<td>
+			{{post.username}}
+		</td>
+		<td>
+			{{post.password}}
+		</td>
+		<td>
+			{{post.first_name}}
+		</td>
+		<td>
+			{{post.last_name}}
+		</td>
+		<td>
+			{{post.age}}
+		</td>
+		<td>
+			{{post.gender}}
+		</td>
+
+	</tr>
+{% endfor %}	
+		
+	
+</table>	
+
+
+ 	
+
+
+</body>
+</html>

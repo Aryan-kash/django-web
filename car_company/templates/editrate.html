@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<br><br><br>
+{{Car_Id}}
+<form action='#' method='post'>
+{% csrf_token %}
+
+CAR_ID:<input type='text' name='Car_Id' value={{Car_Id}}>
+<input type='submit' value='submit' name='submit'>
+
+</form>
+<form action='#' method='post'>
+{% csrf_token %}
+{% for cardetails in cardet %}
+Current Rate_perday: <input type='text'  value={{cardetails.Rate_perday}}><br><br>
+Set Rate_perday::<br><br><input type='text'  name='Rate_perday'><br><br>
+<input type='submit' value='edit' name='edit'>
+{% endfor %}
+</form>
+
+</body>
+
+</html>
